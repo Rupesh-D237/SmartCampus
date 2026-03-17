@@ -1,0 +1,38 @@
+.chatBox {
+  height: 360px;
+  overflow: auto;
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--bg) 70%, transparent);
+}
+
+[data-theme='dark'] .chatBox {
+  background: color-mix(in srgb, var(--card) 80%, transparent);
+}
+
+.chatMsg {
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid color-mix(in srgb, var(--border) 70%, transparent);
+  background: color-mix(in srgb, var(--secondary) 40%, transparent);
+  margin-bottom: 10px;
+}
+
+.chatMsg.assistant {
+  background: color-mix(in srgb, var(--accent) 18%, transparent);
+}
+
+.chatMeta {
+  font-size: 12px;
+  font-weight: 800;
+  color: color-mix(in srgb, var(--text) 85%, transparent);
+  margin-bottom: 4px;
+}
+
+.chatText {
+  font-size: 14px;
+  color: color-mix(in srgb, var(--text) 92%, transparent);
+  white-space: pre-wrap;
+}
+

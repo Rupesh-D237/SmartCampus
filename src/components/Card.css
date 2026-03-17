@@ -1,0 +1,63 @@
+.card {
+  border-radius: var(--radius);
+  background: color-mix(in srgb, var(--card) 92%, transparent);
+  border: 10px solid var(--border);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+[data-theme='dark'] .card {
+  background: var(--card);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px 1px;
+  border-bottom: 1px solid color-mix(in srgb, var(--border) 70%, transparent);
+}
+
+.cardTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.cardIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: color-mix(in srgb, var(--accent) 35%, transparent);
+}
+
+.cardIcon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.cardTitle {
+  margin: 0;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--text) 88%, transparent);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cardBody {
+  padding: 14px 16px 16px;
+}
+
+.cardRight {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+

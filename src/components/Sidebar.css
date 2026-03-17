@@ -1,0 +1,115 @@
+.sidebar {
+  position: sticky;
+  top: 0;
+  height: 100dvh;
+  border-right: 1px solid var(--border);
+  background: color-mix(in srgb, var(--bg) 82%, transparent);
+  backdrop-filter: blur(10px);
+}
+
+.sidebarInner {
+  padding: 18px 16px;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebarHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 10px 16px;
+}
+
+.sidebarLogo {
+  width: 44px;
+  height: 44px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--accent), var(--secondary));
+  box-shadow: 0 18px 34px rgba(197, 186, 255, 0.35);
+}
+
+.sidebarTitle {
+  min-width: 0;
+}
+
+.sidebarName {
+  font-weight: 900;
+  letter-spacing: 0.2px;
+}
+
+.sidebarTag {
+  font-size: 12px;
+  color: var(--muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sidebarNav {
+  display: grid;
+  gap: 8px;
+  padding: 4px;
+}
+
+.sideLink {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 10px;
+  align-items: center;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid transparent;
+  text-decoration: none;
+  color: var(--text);
+  background: transparent;
+}
+
+.sideLink:hover {
+  background: color-mix(in srgb, var(--secondary) 45%, transparent);
+  border-color: color-mix(in srgb, var(--border) 70%, transparent);
+}
+
+.sideLink.active {
+  background: color-mix(in srgb, var(--accent) 32%, transparent);
+  border-color: color-mix(in srgb, var(--accent) 55%, transparent);
+}
+
+.sideIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: color-mix(in srgb, var(--secondary) 50%, transparent);
+}
+
+.sideIcon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.sideLabel {
+  font-weight: 700;
+  font-size: 13px;
+}
+
+@media (max-width: 920px) {
+  .sidebar {
+    position: relative;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .sidebarInner {
+    padding: 12px;
+  }
+
+  .sidebarNav {
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(190px, 1fr);
+    overflow: auto;
+    padding: 8px 2px;
+  }
+}
+

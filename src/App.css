@@ -1,0 +1,24 @@
+.appShell {
+  min-height: 100dvh;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.content {
+  padding: 18px 18px 28px;
+}
+
+@media (max-width: 920px) {
+  .appShell {
+    grid-template-columns: 1fr;
+  }
+  .content {
+    padding: 14px 14px 22px;
+  }
+}

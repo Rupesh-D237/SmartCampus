@@ -1,0 +1,26 @@
+.serviceLink {
+  text-decoration: none;
+  color: inherit;
+}
+
+.serviceGo {
+  font-size: 12px;
+  font-weight: 900;
+  border-radius: 999px;
+  padding: 8px 10px;
+  border: 1px solid color-mix(in srgb, var(--accent) 55%, transparent);
+  background: color-mix(in srgb, var(--accent) 26%, transparent);
+}
+
+.serviceBody {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.serviceDesc {
+  font-size: 14px;
+  color: var(--muted);
+}
+

@@ -1,0 +1,100 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(10px);
+  background: color-mix(in srgb, var(--bg) 72%, transparent);
+  border-bottom: 1px solid var(--border);
+}
+
+.navbarInner {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 14px 0;
+}
+
+.navbarBrand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.brandMark {
+  width: 40px;
+  height: 40px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--accent), var(--secondary));
+  box-shadow: 0 14px 30px rgba(197, 186, 255, 0.35);
+}
+
+.brandText {
+  min-width: 0;
+}
+
+.brandTitle {
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.brandSub {
+  color: var(--muted);
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.navbarActions {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.navBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--secondary) 55%, transparent);
+  padding: 10px 12px;
+  text-decoration: none;
+  color: var(--text);
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.navBtn svg {
+  width: 18px;
+  height: 18px;
+}
+
+.navBtn.danger {
+  background: color-mix(in srgb, #ff5a7a 18%, transparent);
+}
+
+.hideSm {
+  display: inline;
+}
+
+@media (max-width: 520px) {
+  .hideSm {
+    display: none;
+  }
+  .navbarInner {
+    width: calc(100% - 24px);
+  }
+}
+
