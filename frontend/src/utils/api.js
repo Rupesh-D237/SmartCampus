@@ -1,5 +1,7 @@
 import { getToken, logout } from './auth.js'
 
+const API_BASE = (import.meta.env.VITE_API_BASE_URL || '').replace(/\/+$/, '')
+
 async function parseJsonSafe(res) {
   const text = await res.text()
   if (!text) return null
@@ -25,7 +27,8 @@ export async function apiFetch(path, { method = 'GET', body, headers, auth = tru
     payload = JSON.stringify(body)
   }
 
-  const res = await fetch(path, { method, headers: h, body: payload })
+  const url = path.startsWith('http') ? path : `${API_BASE}${path}`
+  const res = await fetch(url, { method, headers: h, body: payload })
   const data = await parseJsonSafe(res)
 
   if (res.status === 401) {

@@ -12,6 +12,11 @@ dist
 dist-ssr
 *.local
 
+# Backend local DB files (H2)
+backend/data/
+**/*.mv.db
+**/*.trace.db
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
