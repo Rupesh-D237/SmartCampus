@@ -25,7 +25,11 @@ export async function apiFetch(path, { method = 'GET', body, headers, auth = tru
     payload = JSON.stringify(body)
   }
 
-  const res = await fetch(path, { method, headers: h, body: payload })
+  // Prepend backend URL from environment variable
+  const baseUrl = import.meta.env.VITE_API_URL || ''
+  const url = path.startsWith('http') ? path : baseUrl.replace(/\/$/, '') + (path.startsWith('/') ? path : '/' + path)
+
+  const res = await fetch(url, { method, headers: h, body: payload })
   const data = await parseJsonSafe(res)
 
   if (res.status === 401) {
