@@ -62,6 +62,7 @@ public class SecurityConfig {
 		CorsConfiguration config = new CorsConfiguration();
 		config.addAllowedOriginPattern("http://localhost:*");
 		config.addAllowedOriginPattern("http://127.0.0.1:*");
+		config.addAllowedOrigin("https://smart-campus-mauve.vercel.app");
 		config.addAllowedHeader("*");
 		config.addAllowedMethod("*");
 		config.setAllowCredentials(true);
